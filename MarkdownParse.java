@@ -29,7 +29,7 @@ public class MarkdownParse {
             int closeParen = markdown.indexOf(")", openParen);
             while (markdown.indexOf("(", openParen + 1) != -1 && markdown.indexOf("(", openParen + 1) < closeParen) {
                openParen = markdown.indexOf("(", openParen + 1);
-           }
+            }
             if (closeBracket + 1 == openParen) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
@@ -43,7 +43,7 @@ public class MarkdownParse {
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
         String content = Files.readString(fileName);
-        System.out.println(content.length());
+        //System.out.println(content.length());
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
     }
