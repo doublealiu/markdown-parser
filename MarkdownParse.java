@@ -31,7 +31,7 @@ public class MarkdownParse {
             while (markdown.indexOf("(", openParen + 1) != -1 && markdown.indexOf("(", openParen + 1) < closeParen) {
                openParen = markdown.indexOf("(", openParen + 1);
             }
-            if (closeBracket + 1 == openParen) {
+            if (closeBracket + 1 == openParen && openBracket + 1 != closeBracket) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
             currentIndex = closeParen + 1;
