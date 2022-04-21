@@ -17,6 +17,21 @@ public class MarkdownParseTest {
         assertEquals(List.of("https://something.com", "some-thing.html"), readFile("test-file.md"));
     }
 
+    @Test
+    public void testNestedBreak() {
+        assertEquals(List.of("https://www.youtube.com/"), readFile("nested-break-test.md"));
+    }
+
+    @Test
+    public void testBreakingTest() {
+        assertEquals(List.of("https://www.youtube.com/"), readFile("breaking-test.md"));
+    }
+
+    @Test
+    public void testNewlineBreak() {
+        assertEquals(List.of("https://www.youtube.com/"), readFile("newline-break-test.md"));
+    }
+
     public ArrayList<String> readFile(String fileName) {
         Path filePath = Path.of(fileName);
         String content = null;
