@@ -42,8 +42,8 @@ public class MarkdownParse {
 
 
     public static void main(String[] args) throws IOException {
-        //testIndividual
-        testManyFileX();
+        testIndividual(args[0]);
+
     }
 
     public static void testManyFileX() throws IOException {
